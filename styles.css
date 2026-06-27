@@ -1,0 +1,122 @@
+ /* General Styling */
+       body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', sans-serif;
+        background: linear-gradient(to bottom, #dbd5cd, #ffffff);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url('../assets/bg-login.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
+    /* Login Container */
+    .login-container {
+        width: 90%;
+        max-width: 350px;
+        background: rgba(255, 255, 255, 0.15); /* More transparency */
+        border-radius: 20px;
+        padding: 25px 30px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s; /* For hover effect */
+    }
+
+    .login-container:hover {
+        transform: scale(1.05); /* Slight zoom-in */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+    }
+
+    /* Form Heading */
+    .login-container h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: #0f0f0f;
+        margin-bottom: 20px;
+    }
+
+    /* Form Group */
+    .form-label {
+        font-weight: bold;
+        font-size: 0.9rem;
+        color: #0f0f0f;
+        text-align: left;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .form-control {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.85);
+        color: #0f0f0f;
+        box-sizing: border-box;
+    }
+
+    .password-box {
+        position: relative;
+    }
+
+    .password-box input {
+        padding-right: 45px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 1.5;
+    }
+
+    .toggle-password {
+        position: absolute;
+        top: 32%;
+        right: 12px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: #888;
+        font-size: 1.5rem;
+        transition: color 0.3s;
+    }
+
+    .toggle-password:hover {
+        color: #555;
+    }
+
+    /* Login Button */
+    .btn-secondary {
+        background-color: #9b9898;
+        color: #0f0f0f;
+        padding: 12px;
+        border-radius: 25px;
+        border: none;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+        background-color: #555;
+        color: white;
+        transform: scale(1.02);
+    }
+
+    /* Forgot Password */
+    .text-primary {
+        margin-top: 15px;
+        font-size: 0.85rem;
+        color: #555;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .text-primary:hover {
+        text-decoration: underline;
+    }
+
+    .form-control {
+        padding-right: 40px; /* Ensures input text doesn't overlap with the icon */
+    }

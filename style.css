@@ -1,0 +1,328 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  color: #333;
+  transition: all 0.3s ease;
+  justify-content: space-between; /* Pushes content to top and bottom */
+  padding-bottom: 20px; /* Optional: Adds padding to the bottom of the sidebar */
+}
+
+/* For Logout button at the bottom */
+.sidebar .mt-auto {
+  margin-top: auto;
+}
+
+.sidebar .nav-item a.text-danger {
+  color: #d9534f; /* Color for logout button */
+}
+
+/* Nav Items - take up all space above logout button */
+.sidebar .nav {
+  flex-grow: 1; /* Take up all space above the logout button */
+  padding-bottom: 153px;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: #333;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #555;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  border-right: 1px solid #e9ecef;
+  padding-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.sidebar .logo h5 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sidebar .nav-link {
+  padding: 12px 20px;
+  font-weight: 500;
+  color: #555;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border-radius: 10px;
+}
+
+.sidebar .nav-link:hover {
+  background-color: #f0f0f0;
+  color: #333;
+  transform: scale(1.05);
+}
+
+.sidebar .nav-link.active {
+  background-color: #333;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* Content Styling */
+.content {
+  margin-left: 270px;
+  padding: 30px;
+  background: #ffffff;
+  transition: margin-left 0.3s ease;
+}
+
+.content h1 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.card-body i {
+  font-size: 3rem;
+  color: #333;
+}
+
+.card-body h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-top: 15px;
+}
+
+.card-body p {
+  color: #666;
+  margin-top: 15px;
+}
+
+/* Tab Styling */
+.nav-tabs .nav-link {
+  color: #333;
+  border: none;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link:hover {
+  color: #28a745;
+  background-color: #f0f0f0;
+}
+/* Document Section */
+h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+color: #222;
+margin-bottom: 20px;
+
+margin-top: 50px; /* Add margin-top to push it down */
+}
+
+.sidebar .nav-link.active {
+background-color: transparent;  /* No background color for active link */
+color: #555;  /* Same color as non-active links */
+transform: scale(1.05);
+}
+
+.nav-tabs .nav-item {
+  margin-right: 40px; /* Adjust the space between tabs */
+}
+
+.tab-btn {
+flex: 1;
+text-align: center;
+padding: 10px;
+font-size: 1rem;
+font-weight: bold;
+background-color: transparent;
+border: none;
+border-bottom: 3px solid transparent;
+cursor: pointer;
+transition: all 0.3s ease;
+color: #666;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+color: #333;
+border-bottom: 3px solid #333;
+}
+.dark-mode .tab-btn {
+color: #b0b0b0;
+border-bottom: 3px solid transparent;
+}
+
+.dark-mode .tab-btn.active {
+color: #5f7161; /* Muted green */
+border-bottom: 3px solid #5f7161;
+}
+/* Dark Mode Styling */
+.dark-mode {
+background-color: #121212;
+color: #eaeaea;
+}
+
+.dark-mode .sidebar {
+background-color: #1f1f1f;
+border-right: 1px solid #333;
+}
+
+.dark-mode .sidebar .nav-link {
+color: #aaa;
+}
+
+.dark-mode .sidebar .nav-link:hover {
+background-color: #444;
+}
+
+/* Dark Mode Active Link Styling */
+.dark-mode .sidebar .nav-link.active {
+background-color: transparent;  /* No background color */
+color: #aaa;  /* Match the regular link color */
+border-radius: 10px; /* Retain the rounded corners */
+}
+
+.dark-mode .content {
+background:#121212;
+color: #eaeaea;
+}
+
+.dark-mode .card {
+background-color: #333;
+color: #eaeaea;
+}
+
+.dark-mode .card-body {
+color: #eaeaea;
+}
+
+.dark-mode .tab-content {
+background-color: #1e1e1e;
+color: #333;
+}
+
+.dark-mode h5 {
+color: #ffffff;
+}
+
+.dark-mode .btn-primary {
+color: #ffffff; 
+}
+
+.dark-mode .btn-primary {
+background-color: #5f7161; /* Updated green for hover */
+}
+.dark-mode .mt-5{
+background-color: #2a2a2a; /* Dark background for tab content */
+color: #e0e0e0;
+border-radius: 10px;
+/* border: 1px solid #5f7161; /* Green border */
+box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+}
+/* Transitions */
+.transition {
+transition: all 0.3s ease;
+}
+/* Document Section */
+.dark-mode h2 {
+font-family: 'Playfair Display', serif;
+font-size: 2rem;
+color: #ffffff;
+margin-bottom: 20px;
+
+margin-top: 50px; /* Add margin-top to push it down */
+}
+.dark-mode nav {
+background-color: #1e1e1e;
+box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+/* Dark Mode Icon Styling */
+.dark-mode .card-body i {
+color: #5f7161; /* Set the icon color to the desired shade of green */
+}
+
+
+
+/* Dark mode specific styles */
+body.dark-mode .tab-btn {
+    color:#ffffff !important; /* White text in dark mode */
+
+}
+
+
+body.dark-mode .table {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .table-bordered th,
+body.dark-mode .table-bordered tr,
+body.dark-mode .table-bordered td {
+  border-color: #555;
+}
+
+body.dark-mode .table-bordered th {
+  background-color:#333;
+  
+}
+
+body.dark-mode .tab-btn {
+  color: #333;
+}
+
+body.dark-mode .nav-tabs .nav-link.active {
+  background-color: #333;
+  border-color: #555;
+}
+
+

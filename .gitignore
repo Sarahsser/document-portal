@@ -1,0 +1,20 @@
+# Database credentials - NEVER commit this
+db_connect.php
+
+# PHPMailer credentials
+notification.php
+
+# User seeding script - delete after use
+add_user.php
+
+# Dependencies
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
