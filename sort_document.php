@@ -262,7 +262,7 @@ body.dark-mode select:focus {
           <?php
           // Assigning text color based on document's status
           $status_class = '';
-          switch ($doc['status']) {
+          switch ($doc['STATUS']) {
             case 'in_progress':
               $status_class = 'text-yellow-600'; // Yellow text for 'In Progress'
               break;
@@ -279,18 +279,18 @@ body.dark-mode select:focus {
           <tr class="border-b hover:bg-gray-50">
             <td class="px-4 py-2"><?php echo htmlspecialchars($doc['full_name']); ?></td>
             <td class="px-4 py-2"><?php echo htmlspecialchars($doc['email']); ?></td>
-            <td class="px-4 py-2"><?php echo htmlspecialchars($doc['year']); ?></td>
+            <td class="px-4 py-2"><?php echo htmlspecialchars($doc['YEAR']); ?></td>
             <td class="px-4 py-2"><?php echo htmlspecialchars($doc['department']); ?></td>
             <td class="px-4 py-2"><?php echo htmlspecialchars($doc['faculty']); ?></td>
             <td class="px-4 py-2"><?php echo htmlspecialchars($doc['document_type']); ?></td>
-            <td class="px-4 py-2 <?php echo $status_class; ?>"><?php echo htmlspecialchars($doc['status']); ?></td>
+            <td class="px-4 py-2 <?php echo $status_class; ?>"><?php echo htmlspecialchars($doc['STATUS']); ?></td>
             <td class="px-4 py-2">
               <form method="post" class="status-update-form d-inline">
                 <input type="hidden" name="document_id" value="<?php echo $doc['id']; ?>">
                 <select name="status" class="form-select form-select-sm w-auto border-gray-300 focus:ring-2 focus:ring-blue-500">
-                  <option value="in_progress" <?php echo $doc['status'] === 'in_progress' ? 'selected' : ''; ?>>In Progress</option>
-                  <option value="ready" <?php echo $doc['status'] === 'ready' ? 'selected' : ''; ?>>Ready for Pickup</option>
-                  <option value="rejected" <?php echo $doc['status'] === 'rejected' ? 'selected' : ''; ?>>Rejected</option>
+                  <option value="in_progress" <?php echo $doc['STATUS'] === 'in_progress' ? 'selected' : ''; ?>>In Progress</option>
+                  <option value="ready" <?php echo $doc['STATUS'] === 'ready' ? 'selected' : ''; ?>>Ready for Pickup</option>
+                  <option value="rejected" <?php echo $doc['STATUS'] === 'rejected' ? 'selected' : ''; ?>>Rejected</option>
                 </select>
                 <button type="submit" class="mt-2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-md hover:bg-green-500 transition">Update</button>
               </form>

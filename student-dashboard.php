@@ -122,7 +122,7 @@ foreach ($statuses as $status) {
       <?php
       // Assign color class based on the status
       $status_class = '';
-      switch ($doc['status']) {
+      switch ($doc['STATUS']) {
         case 'in_progress':
           $status_class = 'bg-warning text-dark'; // Bootstrap "warning" for in-progress status
           break;
@@ -137,7 +137,7 @@ foreach ($statuses as $status) {
           break;
       }
       ?>
-      <span class="badge <?php echo $status_class; ?>"><?php echo ucfirst($doc['status']); ?></span>
+      <span class="badge <?php echo $status_class; ?>"><?php echo ucfirst($doc['status'] ?? 'requested'); ?></span>
     </td>
   </tr>
   <?php endforeach; ?>

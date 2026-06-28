@@ -236,7 +236,7 @@ body.dark-mode {
           <?php foreach ($documents as $doc): ?>
             <tr>
               <td class="fw-bold"><?php echo htmlspecialchars($doc['document_type']); ?></td>
-              <td><?php echo htmlspecialchars($doc['year']); ?></td>
+              <td><?php echo htmlspecialchars($doc['YEAR']); ?></td>
               <td><?php echo htmlspecialchars($doc['department']); ?></td>
               <td><?php echo htmlspecialchars($doc['faculty']); ?></td>
               <td><?php echo htmlspecialchars($doc['preferred_language']); ?></td>
@@ -245,7 +245,7 @@ body.dark-mode {
               <td><?php echo htmlspecialchars(date("M d, Y", strtotime($doc['due_date']))); ?></td>
               <td>
                 <?php
-                switch ($doc['status']) {
+                switch ($doc['status'] ?? 'requested') {
                     case 'requested':
                         echo '<span class="badge bg-secondary"><i class="bi bi-clock"></i> Requested</span>';
                         break;

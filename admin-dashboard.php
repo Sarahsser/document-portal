@@ -1,4 +1,4 @@
-<p?php
+<?php
 session_start();
 require 'db_connect.php';
 
@@ -145,7 +145,7 @@ $recent_pending_documents = $recent_pending_stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo htmlspecialchars($doc['id']); ?></td>
                     <td><?php echo htmlspecialchars($doc['full_name']); ?></td>
                     <td><?php echo htmlspecialchars($doc['document_type']); ?></td>
-                    <td><?php echo htmlspecialchars($doc['status']); ?></td>
+                    <td><?php echo htmlspecialchars($doc['STATUS']); ?></td>
                     <td><?php echo htmlspecialchars($doc['request_date']); ?></td>
                   </tr>
                 <?php endforeach; ?>
@@ -176,7 +176,7 @@ $recent_pending_documents = $recent_pending_stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo htmlspecialchars($doc['id']); ?></td>
                     <td><?php echo htmlspecialchars($doc['full_name']); ?></td>
                     <td><?php echo htmlspecialchars($doc['document_type']); ?></td>
-                    <td><?php echo htmlspecialchars($doc['status']); ?></td>
+                    <td><?php echo htmlspecialchars($doc['STATUS' ?? 'requested']); ?></td>
                     <td><?php echo htmlspecialchars($doc['request_date']); ?></td>
                   </tr>
                 <?php endforeach; ?>
